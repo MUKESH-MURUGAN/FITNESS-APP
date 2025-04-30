@@ -5,12 +5,15 @@ const app = express();
 const connectDb = require('../config/configDb.js');
 const exerciseRouter = require('../routes/exercise.Routes.js');
 const mediaRouter = require('../routes/media.Routes.js');
+const NotificationRouter = require('../routes/notification.Routes.js');
+const dietplanRouter = require('../routes/dietplan.Routes.js');
 
 connectDb();
 
 app.use('/exercise', exerciseRouter);
 app.use('/media',mediaRouter);
-
+app.use('/notification',NotificationRouter);
+app.use('/dietplan',dietplanRouter);
 app.use(express.json());
 
 module.exports = app;
