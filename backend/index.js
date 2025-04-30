@@ -1,15 +1,17 @@
-const express = require('express');
+const User = require('./User.Model');
+const Article = require('./Article.Model');
+const Comment = require('./Comment.Model');
+const DietPlan = require('./DietPlan.Model');
+const ExerciseVideo = require('./Exercise.Model');
+const Media = require('./Media.Model');
+const Notification = require('./Notification.Model');
 
-const app = express();
-
-const connectDb = require('./config/configDb');
-
-connectDb();
-
-app.get('/', (req, res) => {
-  res.send('Hello World!');
-});
-
-app.listen(3000, () => {
-  console.log('Server is running on http://localhost:3000');
-});
+module.exports = {
+  User,
+  Article,
+  Comment,
+  DietPlan,
+  ExerciseVideo,
+  Media,
+  Notification
+};
