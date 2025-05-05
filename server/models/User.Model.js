@@ -14,4 +14,5 @@ const userSchema = new mongoose.Schema({
   favoriteDiets: [{ type: mongoose.Schema.Types.ObjectId, ref: 'DietPlan' }]
 }, { timestamps: true });
 
-module.exports = mongoose.model('User', userSchema);
+const UserModal = mongoose.model('User', userSchema);
+module.exports = UserModal;
