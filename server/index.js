@@ -2,7 +2,7 @@ const app = require('./src/app');
 const PORT = 3000;
 
 app.get('/',(req,res)=>{
-  res.send("hi this a fitness and wellness content management system");
+   res.send("hi this a fitness and wellness content management system");
 })
 
 app.listen(PORT, () => {
